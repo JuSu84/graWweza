@@ -27,7 +27,7 @@ public class Scena extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        WazDataPunkt wdp = new WazDataPunkt(rowIndex, columnIndex);
+        WazDataPunkt wdp = new WazDataPunkt(columnIndex, rowIndex);
 
         if (this.srodowisko.getPokarm().equals(wdp)) {
             return "*";

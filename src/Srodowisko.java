@@ -11,9 +11,15 @@ public class Srodowisko implements ActionListener, KeyListener {
     public static final int WYSOKOSC_PLANSZY = 30;
 
     private WazDataPunkt pokarm;
+    private Scena scena;
+
 
     public WazDataPunkt getPokarm() {
         return pokarm;
+    }
+
+    public void setScena(Scena scena) {
+        this.scena = scena;
     }
 
     public void actionPerformed(ActionEvent e) {

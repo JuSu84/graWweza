@@ -9,10 +9,11 @@ public class App {
         JFrame frame = new JFrame("Gra w węża");
 
 
-        frame.setSize(300, 300);
+        frame.setSize(500, 530);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+
+
         frame.addKeyListener(srodowisko);
 
         ExitSwitch es = new ExitSwitch(srodowisko);
@@ -26,7 +27,10 @@ public class App {
         JTable tabela = new JTable(scena);
         scena.setTabela(tabela);
         scena.setSrodowisko(srodowisko);
-        frame.add(tabela);
+        srodowisko.setScena(scena);
+        tabela.addKeyListener(es);
 
+        frame.add(tabela);
+        frame.setVisible(true);
     }
 }
